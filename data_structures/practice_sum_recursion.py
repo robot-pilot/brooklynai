@@ -1,0 +1,14 @@
+import array
+
+arr = array.array("i", [1,2,3,4,5])
+
+[print(i, end=' ') for i in arr]
+print()
+
+def sum_array(arr):
+	if not arr:
+		return 0
+	else:
+		return arr[0] + sum_array(arr[1:])
+
+print(sum_array(arr.tolist()))
